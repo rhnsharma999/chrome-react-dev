@@ -1,10 +1,11 @@
-"use strict";
-const baseConfig = require("chrome-build/webpack.common.config");
+"use strict"
+const baseConfig = require("chrome-build/webpack.common.config")
+const path = require("path")
+
+const packageRoot = path.resolve(__dirname)
 
 module.exports = Object.assign(baseConfig, {
   entry: {
-    popup: "./src/index.tsx",
+    popup: path.resolve(packageRoot, "src", "index.tsx"),
   },
-});
-
-console.log(module.exports);
+})

@@ -1,13 +1,14 @@
-"use strict";
+"use strict"
 
-const path = require("path");
-const monoRoot = path.resolve(__dirname, "../../packages");
+const path = require("path")
+const monoRoot = path.resolve(__dirname, "../../packages")
 
 module.exports = {
   output: {
     path: path.resolve(monoRoot, "../dist"),
     filename: "[name].js",
   },
+  mode: process.env.NODE_ENV || "production",
   resolve: {
     alias: {
       "chrome-background": path.resolve(monoRoot, "chrome-background", "src"),
@@ -31,4 +32,4 @@ module.exports = {
       },
     ],
   },
-};
+}
