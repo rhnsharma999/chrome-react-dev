@@ -1,10 +1,11 @@
-"use strict";
+"use strict"
 
-const path = require("path");
-const baseConfig = require("chrome-build/webpack.common.config");
+const path = require("path")
+const baseConfig = require("chrome-build/webpack.common.config")
+const packageRoot = path.resolve(__dirname)
 
 module.exports = Object.assign(baseConfig, {
   entry: {
-    background: "./src/index.ts",
+    background: path.resolve(packageRoot, "src", "index.ts"),
   },
-});
+})
