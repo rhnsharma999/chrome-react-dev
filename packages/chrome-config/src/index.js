@@ -1,5 +1,5 @@
-const manifestConfig = require("./config/manifest.json")
+const manifestBaseConfig = require("./config/manifestBase.json")
 
-const getManifest = () => JSON.parse(manifestConfig)
+const getManifestBase = () => manifestBaseConfig
 
-module.exports.getManifest = getManifest
+module.exports.getManifestBase = getManifestBase
