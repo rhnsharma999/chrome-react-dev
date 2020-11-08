@@ -9,8 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chrome-build": "1.0.0",
-    "html-webpack-plugin": "^4.5.0"
+    "chrome-build": "1.0.0"
   },
   "dependencies": {
     "@types/react": "^16.9.52",

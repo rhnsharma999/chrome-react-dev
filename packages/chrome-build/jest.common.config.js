@@ -1,9 +1,10 @@
-module.exports = (rootDir) => ({
+const path = require("path")
+
+module.exports = {
   moduleFileExtensions: ["ts", "tsx", "js"],
   transform: {
-    "\\.(ts|tsx)$": `${rootDir}/node_modules/ts-jest/preprocessor.js`,
+    "\\.(ts|tsx)$": `ts-jest`,
   },
   setupFiles: ["raf/polyfill"],
   testRegex: "/__tests__/.*\\.(ts|tsx|js)$",
-  //setupTestFrameworkScriptFile: "<rootDir>src/setup/setupTests.ts",
-})
+}
