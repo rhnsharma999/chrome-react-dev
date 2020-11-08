@@ -53,7 +53,12 @@ task(BUILD_BACKGROUND, (callback) => {
 })
 
 task(BUILD_MANIFEST, (callback) => {
-  const outputFilePath = path.resolve(projectRoot, "dist", "manifest.json")
+  const outputDirectory = path.resolve(projectRoot, "dist")
+  const outputFilePath = path.resolve(outputDirectory, "manifest.json")
+
+  if (!fs.existsSync(outputDirectory)) {
+    fs.mkdirSync(outputDirectory)
+  }
   fs.writeFile(outputFilePath, JSON.stringify(generateManifestObject(), null, 5), callback)
 })
 
