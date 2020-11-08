@@ -7,7 +7,6 @@ const { task, series, parallel } = require("gulp")
 const path = require("path")
 const webpack = require("webpack")
 const webpackErrorOutput = require("../lib/webpackErrorOutput")
-const generateConfig = require("../lib/generateConfig")
 const generateManifestObject = require("../lib/generateConfig")
 
 // custom path resolves
@@ -21,6 +20,7 @@ const BUILD_POPUP = "build:popup"
 const BUILD_MANIFEST = "build:manifest"
 const BUILD_CLEAN = "build:clean"
 
+// actual gulp tasks here. There is no logical order. Might clean up later
 task(BUILD_POPUP, (callback) => {
   const config = require(path.resolve(monoRoot, "chrome-popup", "webpack.config.js"))
 
